@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BTC.Importer", "BTC.Importer\BTC.Importer.csproj", "{731B5AAF-840C-4D32-AE40-D2CF84377810}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BTC.RealTimeDataSource", "BTC.RealTimeDataSource\BTC.RealTimeDataSource.csproj", "{FFCAB3EB-375A-4D67-9A58-FD32EF54715E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BTC.SavedFileDataSource", "BTC.SavedFileDataSource\BTC.SavedFileDataSource.csproj", "{A41E0653-AE63-47E8-9278-9563C2235E8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BTC.Model", "BTC.Model\BTC.Model.csproj", "{B6EBFAF9-8022-4CA0-87C4-25524B829D6C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{731B5AAF-840C-4D32-AE40-D2CF84377810}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{731B5AAF-840C-4D32-AE40-D2CF84377810}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{731B5AAF-840C-4D32-AE40-D2CF84377810}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{731B5AAF-840C-4D32-AE40-D2CF84377810}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFCAB3EB-375A-4D67-9A58-FD32EF54715E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFCAB3EB-375A-4D67-9A58-FD32EF54715E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFCAB3EB-375A-4D67-9A58-FD32EF54715E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFCAB3EB-375A-4D67-9A58-FD32EF54715E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A41E0653-AE63-47E8-9278-9563C2235E8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A41E0653-AE63-47E8-9278-9563C2235E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A41E0653-AE63-47E8-9278-9563C2235E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A41E0653-AE63-47E8-9278-9563C2235E8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6EBFAF9-8022-4CA0-87C4-25524B829D6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6EBFAF9-8022-4CA0-87C4-25524B829D6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6EBFAF9-8022-4CA0-87C4-25524B829D6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6EBFAF9-8022-4CA0-87C4-25524B829D6C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9A23D04B-00C3-4211-84EB-0F4AC1DC0527}
+	EndGlobalSection
+EndGlobal
