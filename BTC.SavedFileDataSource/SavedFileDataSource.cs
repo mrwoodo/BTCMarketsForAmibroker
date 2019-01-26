@@ -40,14 +40,15 @@ namespace BTC.SavedFileDataSource
                             if (tickerData.Ticker.Equals(t.ticker, StringComparison.CurrentCultureIgnoreCase))
                             {
                                 var offset = DateTimeOffset.FromUnixTimeMilliseconds(t.timestamp);
-                                var quote = new Quotation();
-
-                                quote.DateTime = (AmiDate)offset.LocalDateTime;
-                                quote.Open = t.price;
-                                quote.High = t.price;
-                                quote.Low = t.price;
-                                quote.Price = t.price;
-                                quote.Volume = t.vol;
+                                var quote = new Quotation
+                                {
+                                    DateTime = (AmiDate)offset.LocalDateTime,
+                                    Open = t.price,
+                                    High = t.price,
+                                    Low = t.price,
+                                    Price = t.price,
+                                    Volume = t.vol
+                                };
 
                                 tickerData.Quotes.Merge(quote);
                             }

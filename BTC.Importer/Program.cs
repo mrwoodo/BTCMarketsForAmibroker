@@ -3,15 +3,19 @@ using System;
 
 namespace BTC.Importer
 {
+    /// <summary>
+    /// Refer to app.config for which BTCMarkets currency pairs we are listening for
+    /// e.g. <add key="pairs" value="BTCAUD,XRPAUD" />
+    /// </summary>
     class Program
     {
         public static void Main(string[] args)
         {
-            var runner = new Runner();
+            var importer = new Importer();
 
             try
             {
-                runner.Start();
+                importer.Start();
             }
             catch (Exception ex)
             {
@@ -20,14 +24,14 @@ namespace BTC.Importer
         }
     }
 
-    public class Runner
+    public class Importer
     {
-        SocketListener _listener;
-        EventPublisher _publisher;
+        private BTCMarketsSocketListener _listener;
+        private EventPublisher _publisher;
 
         public void Start()
         {
-            _listener = new SocketListener();
+            _listener = new BTCMarketsSocketListener();
             _publisher = new EventPublisher();
 
             _listener.OnTrade += _listener_OnTrade;

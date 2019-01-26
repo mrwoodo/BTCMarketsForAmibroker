@@ -12,7 +12,7 @@ namespace BTC.Importer
     /// <summary>
     /// For details on the BTC Markets Public Market API, refer to: https://github.com/BTCMarkets/API/wiki/Websocket
     /// </summary>
-    public class SocketListener
+    public class BTCMarketsSocketListener
     {
         public event EventHandler<MarketTrade> OnTrade;
         public event EventHandler<MarketTick> OnTick;
@@ -26,7 +26,7 @@ namespace BTC.Importer
 
         private string[] _pairs;
 
-        public SocketListener()
+        public BTCMarketsSocketListener()
         {
             _fileName = "TICKER" + DateTime.Now.ToString("_yyyy_MM_dd_HHmmss") + ".txt";
             _pairs = ConfigurationManager.AppSettings["pairs"].Split(',');

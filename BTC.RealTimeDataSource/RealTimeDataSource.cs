@@ -89,12 +89,13 @@ namespace BTC.RealTimeDataSource
 
         public override PluginStatus GetStatus()
         {
-            var status = new PluginStatus();
-
-            status.Status = StatusCode.OK;
-            status.Color = System.Drawing.Color.ForestGreen;
-            status.ShortMessage = "Ready";
-            status.LongMessage = LogAndMessage.GetMessages();
+            var status = new PluginStatus
+            {
+                Status = StatusCode.OK,
+                Color = System.Drawing.Color.ForestGreen,
+                ShortMessage = "Ready",
+                LongMessage = LogAndMessage.GetMessages()
+            };
 
             if (string.IsNullOrEmpty(status.LongMessage))
             {
@@ -197,16 +198,17 @@ namespace BTC.RealTimeDataSource
                     if (tickerData.Quotes != null)
                         tickerData.Quotes.Clear();
 
-                    quote = new Quotation();
-
                     var offset = DateTimeOffset.FromUnixTimeMilliseconds(trade.timestamp);
 
-                    quote.DateTime = (AmiDate)offset.LocalDateTime;
-                    quote.Price = trade.price;
-                    quote.High = trade.price;
-                    quote.Low = trade.price;
-                    quote.Open = trade.price;
-                    quote.Volume = trade.vol;
+                    quote = new Quotation
+                    {
+                        DateTime = (AmiDate)offset.LocalDateTime,
+                        Price = trade.price,
+                        High = trade.price,
+                        Low = trade.price,
+                        Open = trade.price,
+                        Volume = trade.vol
+                    };
 
                     if (tickerData.Quotes != null)
                         tickerData.Quotes.Merge(quote);

@@ -41,14 +41,16 @@ namespace BTC.RealTimeDataSource
         {
             lock (this)
             {
-                RecentInfo = new RecentInfo();
-                RecentInfo.Bitmap = RecentInfoField.Last |
+                RecentInfo = new RecentInfo
+                {
+                    Bitmap = RecentInfoField.Last |
                     RecentInfoField.Bid |
                     RecentInfoField.Ask |
                     RecentInfoField.TradeVol |
                     RecentInfoField.TotalVol |
                     RecentInfoField.DateChange |
-                    RecentInfoField.DateUpdate;
+                    RecentInfoField.DateUpdate
+                };
             }
         }
     }
